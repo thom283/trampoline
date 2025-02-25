@@ -203,7 +203,7 @@ const getAvatar = async (userId) => {
   metrics.avatars++;
   const id = `avatars/${userId}`;
   return computeIfMissing(id, HOUR * 6, () => {
-    return imageQueue.queuePromise(`https://uploads.scratch.mit.edu/users/avatars/${userId}.png`);
+    return imageQueue.queuePromise(`https://https://uploads.scratch.mit.edu/get_image/user/${userId}_128x128.png`);
   });
 };
 
